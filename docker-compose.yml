@@ -1,7 +1,7 @@
 services:
   postgres:
     container_name: postgres
-    image: postgres
+    image: postgres:15.3
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-owenz}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
