@@ -44,6 +44,13 @@ public class CustomerJDBCService implements CustomerDaoService {
         return jdbcTemplate.query(sql, customerMapper);
     }
 
+    /**
+     * This method builds api response
+     * @param isSuccess
+     * @param message
+     * @param data
+     * @return
+     */
     private ApiResponse buildApiResponse(Boolean isSuccess, String message, Object data) {
         return ApiResponse.builder()
                 .success(isSuccess)
