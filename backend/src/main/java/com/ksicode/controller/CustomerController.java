@@ -20,6 +20,11 @@ public class CustomerController {
     private final CustomerService customerService;
 
 
+    /**
+     * This API creates a new customer
+     * @param request create customer request
+     * @return response entity
+     */
     @PostMapping
     public ResponseEntity<ApiResponse> createCustomer(@Valid @RequestBody CustomerRegistrationRequest request){
         ApiResponse createdCustomer = customerService.saveCustomer(request);
